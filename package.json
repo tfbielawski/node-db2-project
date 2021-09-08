@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand"
+    "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand",
+    "up": "knex migrate:up",
+    "down": "knex migrate:down",
+    "latest": "knex migrate:latest",
+    "seed": "knex seed:run"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
@@ -17,10 +21,12 @@
   "dependencies": {
     "express": "^4.17.1",
     "knex": "^0.95.11",
-    "sqlite3": "^5.0.2"
+    "node": "^16.6.1",
+    "sqlite3": "^5.0.2",
+    "vin-validator": "^1.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/node-db2-project.git"
+    "url": "git+https://github.com/jessejohns-1/node-db2-project"
   }
 }
